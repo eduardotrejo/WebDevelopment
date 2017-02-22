@@ -4,8 +4,9 @@
 
 <b>Includes</b>
 * Admin options
-* Add and remove option
+* Add,delete, update option
 * Genre of the games
 * Video game database
 * Developer database
-
+* Users database(for admins)
+* Contains log data
