@@ -1,0 +1,27 @@
+#wrapper {
+    text-align: center;
+}
+table {
+    background-color: lightgreen;
+}
+th {
+   	 	font-size: 18px;
+}
+td {
+  text-align: center;
+  font-size: 18px;
+}
+.wordHover {
+	color:red;
+	font-style:oblique;
+}
+body {
+	background: #D56E27;
+}
+button:hover{
+		cursor:pointer;
+}		
+span{
+	font-style:italic;
+	font-size: 30px;
+}
