@@ -1,5 +1,6 @@
 #VideoGamesAwesome
 
+<b>CONNECTION FILE NOT INCLUDED</b>
 <p>The idea behind this project was to create a video game database.</p>
 <p>Showcases the use of HTML, CSS, JQuery, SQL, PHP, and Javascript</p>
 
