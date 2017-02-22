@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame 
+       Remove this if you use the .htaccess -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Registration</title>
+  <meta name="description" content="">
+  <meta name="author" content="Eduardo">
+
+  <meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+  <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script>
+   function getCounties() {        
+   		var stateSelected = document.getElementById("state").value; 
+   		//alert(stateSelected);
+   		var url = "http://hosting.otterlabs.org/laramiguel/ajax/countyList.php?state="; 
+  
+   		var ajax;
+   		if (window.XMLHttpRequest) {
+         	ajax= new XMLHttpRequest();
+     	}
+ 
+   		ajax.open("GET", url + stateSelected, true);
+  		ajax.send();
+                
+     	ajax.onreadystatechange=function() {
+          	if (ajax.readyState==4 && ajax.status==200) {
+              	  //alert(ajax.responseText);  //displays value retrieved from PHP program
+              	  var data = JSON.parse(ajax.responseText);
+				  var countySelected = document.getElementById("county");
+				  countySelected.innerHTML="<option> Select One </option>";
+               
+				  for (var i=0; i< data['counties'].length; i++) {
+				  		// adding a new option as the for loop goes on. goes into variable data.
+   						 countySelected.innerHTML += "<option>" + data["counties"][i].county + "</option>";
+  				  }//endFor
+
+           	} 
+     	}  
+	} //end Function
+
+	function getCountyList_jQuery() {        
+      $.ajax({
+            type: "get", //post
+            url: "http://hosting.otterlabs.org/laramiguel/ajax/countyList.php",
+            dataType: "json",//since server use json to avoid cross server jsonp
+            // json example { "counties": [ {"county":"Alameda County"},{"county":"Yuba County"},{"county":""}] }
+            data: { "state": $("#state").val() }, // the variable the function is expecting.
+            // Multiple variables , 
+            success: function(data,status) {
+            	 //alert(data);
+                 $("#county").html("<option> Select One </option>");
+                 for (var i=0; i< data['counties'].length; i++){ // counties is a list/array.
+                     $("#county").append("<option>" + data["counties"][i].county + "</option>" );
+                }
+              },
+              complete: function(data,status) { //optional, used for debugging purposes
+                  //alert(status);
+              }
+         });    
+     }
+     // If at the begginning it needs document . ready if at the end it doesn't.
+	$(document).ready(function(){
+		$("#username").change( function(){
+    		 //alert($(this).val()); //showing the username entered, for testing purposes
+    		  $.ajax({
+            			type: "get",
+            			url: "usernameLookup.php",
+            			// dataType: not given since the type is html.
+            			data: { "username": $(this).val()},
+           				success: function(data,status) {
+                 			//alert(data); //displaying data received, for testing purposes
+                 			if (data == "Available") {
+                    	   		 $("#usernameValidation").html("Available!"); 
+                    	   		 $("#usernameValidation").css("color","green");
+                 			}
+               			    else {
+                       				 $("#usernameValidation").html("Username already taken!");         
+                        			 $("#usernameValidation").css("color","red");
+                 			}           
+            			}
+              });
+
+    	});
+	});
+
+ 
+  
+  </script>
+</head>
+
+<body>
+  <div>
+    <header>
+      <h1>Sign Up</h1>
+    </header>
+
+    <div>
+      <form>
+      	First Name: <input type="text" id="firstName" name="firstName"><br>
+      	Last Name: <input type="text" id="lastName" name="lastName"><br>
+      	Email: <input type="text" id="email" name="email"><br>
+      	Username: <input type="text" id="username" name="username">
+      	<span style="color:red" id="usernameValidation"></span>  <br/>
+      	State: <input type="text" id="state" name="state" onchange="getCountyList_jQuery()"><br>
+      	County: <select id="county"></select>
+      	<input type="submit" />
+      </form>
+    </div>
+
+    <footer> 
+     <p>&copy; Copyright  by Eduardo</p>
+    </footer>
+  </div>
+</body>
+</html>
