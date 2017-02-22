@@ -1,0 +1,57 @@
+#wrapper{
+		width:600px;
+		height:360px;
+        margin:auto;
+		text-align:center;
+}
+#finaltotal {
+	display: none;
+}
+#wrap{
+		font-size: 25px;
+}
+#finaltax {
+	display: none;
+
+}
+table{
+    margin:auto;
+	border: solid 1px black;
+	background-color:lightblue; 
+}
+#tableHeader{
+    margin:auto;
+    padding:15px;
+    font-size:20px;
+}
+#shippingBox {
+    text-align:left;
+    border: solid 1px black;
+    padding: 5px;
+	background: white;
+}
+#stateBox {
+    display:inline;
+    border: solid 1px black;
+    padding: 3px;
+	background: white;
+}
+#item1, #item2, #item3{
+    text-align:center;
+}
+#item1Remove:hover,#item2Remove:hover, #item3Remove:hover{
+    cursor:pointer;
+	background-color:white;
+}
+#cost, #tax, #S_H, #total{
+    display:inline;
+    padding:2px;
+}
+input[type=submit]:hover
+{
+    cursor:pointer;
+}
+input[type=radio]:hover
+{
+    cursor:pointer;
+}
