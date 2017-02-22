@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>Assignment 4</title>
+<link rel="stylesheet" type="text/css" href="css/assign4.css">
+</head>
+<div id="wrapper">
+    <body>
+    <form method="post" action="assign4.php">
+    <table>
+    <tr>
+    <td id="tableHeader"><strong>Product</strong></td>
+    <td id="tableHeader"><strong>Quantity</strong></td>
+    <td id="tableHeader"><strong>Unit Price</strong></td>
+    <td id="tableHeader"><strong>Total</strong></td>
+    <td id="tableHeader"></td>
+    </tr>
+    <tr>
+    <td>Diablo III</td>
+    <td><input id="item1" type="number" min="0" max="10" name="i1"/></td>
+    <td>40</td>
+    <td><div id="item1_total">0</div></td>
+    <td id="item1Remove">Remove</td>
+    </tr>
+    <tr>
+    <td>Bioshock Infinite</td>
+    <td><input id="item2" type="number" min="0" max="10" name="i2"/></td>
+    <td>30</td>
+    <td><div id="item2_total">0</div></td>
+    <td id="item2Remove">Remove</td>
+    </tr>
+	<tr>
+    <td>The Last of Us</td>
+    <td><input id="item3" type="number" min="0" max="10" name="i3"/></td>
+    <td>60</td>
+    <td><div id="item3_total">0</div></td>
+    <td id="item3Remove">Remove</td>
+    </tr>
+    <tr>
+    <td>
+    <div id="shippingBox">
+        <div style ="text-align:center"><strong>Shipping Method</strong></div>
+        <input name ="shipping" type ="radio" id="Regular" value="0"/><label for="Regular">Regular</label><br>
+        <input name ="shipping" type ="radio" id="5/10 days" value="5.99"/><label for="5/10 days">5 to 10 days(+$5.99)</label><br>
+        <input name ="shipping" type ="radio" id="Following" value="24.99"/><label for="Following">Following day(+$24.99)</label><br>
+    </div>
+    </td>
+    <td colspan="2">
+    <div id="stateBox">
+        <strong>State:</strong>
+        <select id="state" name="state">
+		<option value="" selected>-- Select --</option>
+        <option value="CA">California</option>
+        <option value="AZ">Arizona</option>
+        <option value="FL">Florida</option>
+        <option value="MA">Massachusetts</option>
+        </select>
+    </div>
+    </td>
+    </tr>
+	<tr>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td><strong>Cost: </strong>$<div id="cost">0</div></td>
+	</tr>
+    <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td><strong>S&H: </strong>$<div id="S_H">0.00</div></td>
+    </tr>
+    <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td><strong>Tax: </strong>$<div id="tax">0.00</div>
+    	<input id="finaltax" type="text" name="tax"/>
+    </td>
+	</tr>
+    <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td><strong>Total: </strong>$<div id="total">0.00</div>
+    	<input id="finaltotal" type="text" name="total"/>
+    </td>
+    </tr>
+    <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td><input type="submit"/></td>
+    </tr>
+    </table>
+    </form>
+    </body>
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src ="js/assign4.js"></script>
+    </div>
+</html>
