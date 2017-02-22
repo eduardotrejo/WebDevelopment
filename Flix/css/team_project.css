@@ -1,0 +1,168 @@
+td {
+	  border: solid 1px black;
+      text-align:center;
+}
+span {
+	color: orange;
+}
+table{
+	  margin: auto;
+	  border: solid 1px black;
+}
+body {
+	background: #D56E27;
+}
+
+body form {
+	margin: 0px auto;
+	width: 600px;
+	height: 200px;
+	
+}
+
+#mainwrapper {
+	width: 900px;
+	height: 100%;
+	background: #293E99;
+	margin:auto;
+	text-align:center;	
+	box-shadow: 0px 0px 5px rgb(0, 0, 0);
+	
+}
+
+ul.action {
+     		margin: 0;
+     		padding: 0;
+     		white-space: nowrap;
+     		width: 900px;
+     		overflow-x: auto;
+     		background-color: #ddd;
+}
+ul.action li {
+     		display: inline;
+     		width: 150px;
+     		height: 150px;
+}
+ul.horror{
+     		margin: 0;
+     		padding: 0;
+     		white-space: nowrap;
+     		width: 200px;
+     		overflow-x: auto;
+     		background-color: #ddd;
+}
+ul.horror li {
+     		display: inline;
+     		width: 150px;
+     		height: 150px;
+}
+ul.adventure{
+     		margin: 0;
+     		padding: 0;
+     		white-space: nowrap;
+     		width: 200px;
+     		overflow-x: auto;
+     		background-color: #ddd;
+}
+ul.adventure li {
+     		display: inline;
+     		width: 150px;
+     		height: 150px;
+}
+ul.animated{
+     		margin: 0;
+     		padding: 0;
+     		white-space: nowrap;
+     		width: 900px;
+     		overflow-x: auto;
+     		background-color: #ddd;
+}
+ul.animated li {
+     		display: inline;
+     		width: 150px;
+     		height: 150px;
+}
+ul.comedy{
+     		margin: 0;
+     		padding: 0;
+     		white-space: nowrap;
+     		width: 600px;
+     		overflow-x: auto;
+     		background-color: #ddd;
+}
+ul.comedy li {
+     		display: inline;
+     		width: 150px;
+     		height: 150px;
+}
+ul.documentary{
+     		margin: 0;
+     		padding: 0;
+     		white-space: nowrap;
+     		width: 600px;
+     		overflow-x: auto;
+     		background-color: #ddd;
+}
+ul.documentary li {
+     		display: inline;
+     		width: 150px;
+     		height: 150px;
+}
+ul.drama{
+     		margin: 0;
+     		padding: 0;
+     		white-space: nowrap;
+     		width: 400px;
+     		overflow-x: auto;
+     		background-color: #ddd;
+}
+ul.drama li {
+     		display: inline;
+     		width: 150px;
+     		height: 150px;
+}
+ul.sciencefiction{
+     		margin: 0;
+     		padding: 0;
+     		white-space: nowrap;
+     		width: 800px;
+     		overflow-x: auto; 
+     		background-color: #ddd;
+ }
+ul.sciencefiction li {
+     		display: inline;
+     		width: 150px;
+     		height: 150px;
+}
+ul.thriller{
+     		margin: 0;
+     		padding: 0;
+     		white-space: nowrap;
+     		width: 600px;
+     		overflow-x: auto; 
+     		background-color: #ddd;
+}
+ul.thriller li {
+     		display: inline;
+     		width: 150px;
+     		height: 150px;
+}
+h2 {
+     		display: inline;
+}
+
+input[type=submit]:hover{
+			cursor:pointer;
+}
+img:hover{
+			cursor:pointer;
+}
+#phpwrapper{
+		width:600px;
+		height:900px;
+        margin:auto;
+		text-align:center;
+		font-size: 20px;
+		background: #293E99;
+		box-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
