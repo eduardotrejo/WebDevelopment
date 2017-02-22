@@ -9,3 +9,7 @@
 * User has options of selecting a movie title by genre or director
 * For more information, clicking on film title will provide additional details
 * Software used: myPhpAdmin and Aptana Studio
+
+<p align="center">
+<img src="https://github.com/eduardotrejo/WebDevelopment/blob/master/Flix/flix.png"/>
+</p>
